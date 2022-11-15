@@ -21,6 +21,55 @@ public class CalcService {
 		return AdResult;
 
 	}
+	
+	public String calculateSubtract(
+			String NumA,
+			String NumB
+			)
+			
+	
+	{
+		BigDecimal AdA = new BigDecimal(NumA);
+		BigDecimal AdB = new BigDecimal(NumB);
+		BigDecimal AdR = AdA.subtract(AdB);
+		String AdResult = AdR.toString();
+		return AdResult;
+
+	}
+	
+	public String calculateMultiply(
+			 String NumA,
+			 String NumB
+			 )
+	 
+	{
+		BigDecimal AdA = new BigDecimal(NumA);
+		BigDecimal AdB = new BigDecimal(NumB);
+		BigDecimal AdR = AdA.multiply(AdB);
+		String AdResult = AdR.toString();
+		return AdResult;
+
+	}
+	 public String calculateDivide(
+				String NumA,
+				String NumB
+				)
+
+		{
+			BigDecimal AdA = new BigDecimal(NumA);
+			BigDecimal AdB = new BigDecimal(NumB);
+			
+			try {
+				BigDecimal AdR = AdA.divide(AdB);
+				String AdResult = AdR.toString();
+				return AdR.toString();
+			}catch(Exception e) {
+			    return"無限小数の答えになりました";
+			
+		}
+	
+	
+ }
 
 	//		割り算に関しては特殊なので注意
 	//		
